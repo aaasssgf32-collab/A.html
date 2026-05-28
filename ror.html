@@ -1,0 +1,420 @@
+<html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معايدة عيد الأضحى المبارك من أحمد</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #ffffff;
+            font-family: 'Tajawal', sans-serif;
+            text-align: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 5;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+            margin: 0 auto;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #fffbdf;
+            text-shadow: 0 0 20px rgba(255, 251, 223, 0.6);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #ffffff;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .from-name {
+            display: inline-block;
+            font-size: 2rem;
+            color: #ffd700;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px 25px;
+            border-radius: 50px;
+            border: 2px dashed #ffd700;
+            margin-top: 10px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-fireworks {
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255, 65, 108, 0.5);
+            transition: all 0.3s ease;
+            outline: none;
+            z-index: 10;
+        }
+
+        .btn-fireworks:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(255, 65, 108, 0.8);
+        }
+
+        .btn-fireworks:active {
+            transform: scale(0.98);
+        }
+
+        .btn-download {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00b4db, #0083b0);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 180, 219, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #0083b0, #00b4db);
+        }
+
+        .field {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(to top, #137333, #1e8e3e);
+            border-top: 6px solid #81c995;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .sheep {
+            position: absolute;
+            bottom: 40px;
+            width: 90px;
+            height: 65px;
+            background: #f0f0f0;
+            border-radius: 50px;
+            box-shadow: inset -5px -5px 15px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.2);
+            animation: sheepRun 6s linear infinite, sheepBounce 0.4s ease infinite alternate;
+        }
+
+        .sheep::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 15px;
+            width: 50px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 50%;
+        }
+
+        .sheep-head {
+            position: absolute;
+            top: 5px;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            background: #222;
+            border-radius: 50%;
+        }
+
+        .sheep-head::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            right: -2px;
+            width: 10px;
+            height: 15px;
+            background: #222;
+            border-radius: 50%;
+        }
+
+        .leg {
+            position: absolute;
+            bottom: -15px;
+            width: 6px;
+            height: 18px;
+            background: #222;
+            border-radius: 3px;
+        }
+        .leg1 { left: 20px; transform: rotate(10deg); }
+        .leg2 { left: 35px; transform: rotate(-10deg); }
+        .leg3 { left: 55px; transform: rotate(10deg); }
+        .leg4 { left: 70px; transform: rotate(-10deg); }
+
+        .catcher {
+            position: absolute;
+            bottom: 30px;
+            width: 50px;
+            height: 90px;
+            animation: catcherRun 6s linear infinite, catcherBounce 0.3s ease infinite alternate;
+        }
+
+        .catcher-head {
+            width: 25px;
+            height: 25px;
+            background: #ffdbac;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .catcher-head::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -3px;
+            width: 31px;
+            height: 12px;
+            background: #d9383a;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .catcher-body {
+            width: 20px;
+            height: 45px;
+            background: #ffffff;
+            margin: -2px auto 0;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .catcher-arm {
+            position: absolute;
+            top: 5px;
+            left: -18px;
+            width: 25px;
+            height: 8px;
+            background: #ffffff;
+            transform: rotate(25deg);
+            transform-origin: right center;
+            border-radius: 4px;
+            animation: reachOut 0.3s ease infinite alternate;
+        }
+
+        .catcher-legs {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 20px;
+            margin: 0 auto;
+        }
+
+        .c-leg {
+            width: 6px;
+            height: 20px;
+            background: #ffffff;
+            border-bottom: 4px solid #222;
+        }
+
+        @keyframes sheepRun {
+            0% { right: -150px; }
+            100% { right: 110%; }
+        }
+        @keyframes sheepBounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-8px); }
+        }
+        @keyframes catcherRun {
+            0% { right: -270px; }
+            100% { right: 100%; }
+        }
+        @keyframes catcherBounce {
+            0% { transform: translateY(0) rotate(-5deg); }
+            100% { transform: translateY(-12px) rotate(5deg); }
+        }
+        @keyframes reachOut {
+            0% { transform: rotate(25deg); }
+            100% { transform: rotate(45deg); }
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>عيد أضحى مبارك!</h1>
+        <p>تقبل الله منا ومنكم صالح الأعمال، وأعاد الله علينا وعليكم الأيام بالخير والبركات.</p>
+        <div><span class="from-name">من: أحمد</span></div>
+        <br><br>
+        <button class="btn-fireworks" onclick="createFireworkExplosion()">أطلق الألعاب النارية! 🎆</button>
+        <br>
+        <button class="btn-download" id="downloadBtn">📥 تحميل ror.html</button>
+    </div>
+</div>
+
+<div class="field">
+    <div class="sheep">
+        <div class="sheep-head"></div>
+        <div class="leg leg1"></div>
+        <div class="leg leg2"></div>
+        <div class="leg leg3"></div>
+        <div class="leg leg4"></div>
+    </div>
+    <div class="catcher">
+        <div class="catcher-head"></div>
+        <div class="catcher-body">
+            <div class="catcher-arm"></div>
+        </div>
+        <div class="catcher-legs">
+            <div class="c-leg"></div>
+            <div class="c-leg"></div>
+        </div>
+    </div>
+</div>
+
+<canvas id="fireworksCanvas" width="384" height="751"></canvas>
+
+<script>
+    const canvas = document.getElementById('fireworksCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    let particles = [];
+
+    class Particle {
+        constructor(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.radius = Math.random() * 3 + 1;
+            this.velocity = {
+                x: (Math.random() - 0.5) * 8,
+                y: (Math.random() - 0.5) * 8
+            };
+            this.alpha = 1;
+            this.decay = Math.random() * 0.015 + 0.015;
+        }
+
+        draw() {
+            ctx.save();
+            ctx.globalAlpha = this.alpha;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            ctx.fillStyle = this.color;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = this.color;
+            ctx.fill();
+            ctx.restore();
+        }
+
+        update() {
+            this.velocity.y += 0.05;
+            this.x += this.velocity.x;
+            this.y += this.velocity.y;
+            this.alpha -= this.decay;
+        }
+    }
+
+    function createFireworkExplosion() {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * (canvas.height * 0.5);
+        const colors = ['#FF5733', '#FFC300', '#DAF7A6', '#FF33F6', '#33FFFC', '#00FF00', '#FFFF00'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        for (let i = 0; i < 60; i++) {
+            particles.push(new Particle(x, y, randomColor));
+        }
+    }
+
+    setInterval(createFireworkExplosion, 2000);
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((particle, index) => {
+            if (particle.alpha > 0) {
+                particle.update();
+                particle.draw();
+            } else {
+                particles.splice(index, 1);
+            }
+        });
+        requestAnimationFrame(animate);
+    }
+    animate();
+
+    // تحميل الملف باسم ror.html
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        const htmlContent = document.documentElement.outerHTML;
+        const blob = new Blob([htmlContent], { type: 'text/html' });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.href = url;
+        link.download = 'ror.html';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    });
+</script>
+
+
+</body></html>
